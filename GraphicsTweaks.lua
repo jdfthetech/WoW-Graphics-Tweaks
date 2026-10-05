@@ -1,4 +1,4 @@
--- Graphics Tweaks 0.0.5
+-- Graphics Tweaks 0.0.6
 local function Database()
     if type(GraphicsTweaksDB) ~= "table" then
         GraphicsTweaksDB = {}
@@ -33,7 +33,7 @@ end
 
 local frame = CreateFrame("Frame", "GraphicsTweaksFrame", UIParent,
     "BasicFrameTemplateWithInset")
-frame:SetSize(560, 700)
+frame:SetSize(560, 600)
 frame:SetPoint("CENTER")
 frame:SetMovable(true)
 frame:SetClampedToScreen(true)
@@ -99,7 +99,7 @@ local function GenericSlider(config)
 
     local restore = CreateFrame("Button", config.restoreName, frame, "UIPanelButtonTemplate")
     restore:SetSize(180, 24)
-    restore:SetPoint("TOP", 0, -199 - config.offset)
+    restore:SetPoint("TOP", 0, -160 - config.offset)
     restore:SetText("Restore original")
     local refreshing, applying = false, false
     local UpdateControls
@@ -217,17 +217,17 @@ local RefreshWeather = GenericSlider({
     name = "GraphicsTweaksWeatherSlider",
     restoreName = "GraphicsTweaksRestoreWeatherOriginal",
     label = "Weather Density", cvar = "weatherdensity",
-    min = 0, max = 3, step = 1, offset = 204,
+    min = 0, max = 3, step = 1, offset = 160,
     savedKey = "previousWeatherDensity", overrideKey = "weatherDensityOverride",
 })
 local Renderformat = GenericSlider({
     name = "GraphicsTweaksRenderformat",
     restoreName = "GraphicsTweaksRestoreRenderformatOriginal",
     label = "Render Format", cvar = "renderformat",
-    min = 1, max = 3, step = 1, offset = 408,
+    min = 1, max = 3, step = 1, offset = 320,
     savedKey = "previousRenderformat", overrideKey = "RenderformatOverride",
 })
-local sharpen = Checkbox("GraphicsTweaksSharpen", -660, "Resample Always Sharpen")
+local sharpen = Checkbox("GraphicsTweaksSharpen", -560, "Resample Always Sharpen")
 local function UpdateControls()
     RefreshGround()
     RefreshWeather()
