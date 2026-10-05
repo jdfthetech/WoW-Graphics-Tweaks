@@ -2,7 +2,7 @@
 ## Title: Graphics Tweaks
 ## Notes: Snapping density slider, original-value star, and resample sharpening.
 ## Author: JDFtheTech
-## Version: 1.2.0
+## Version: 0.0.2
 ## SavedVariables: GraphicsTweaksDB
 
 GraphicsTweaks.lua
