@@ -1,8 +1,8 @@
 ## Interface: 16001
 ## Title: Graphics Tweaks
-## Notes: Snapping density slider, original-value star, and resample sharpening.
+## Notes: Ground and weather density sliders,sharpening, render setting
 ## Author: JDFtheTech
-## Version: 0.0.2
+## Version: 0.0.5
 ## SavedVariables: GraphicsTweaksDB
 
 GraphicsTweaks.lua
