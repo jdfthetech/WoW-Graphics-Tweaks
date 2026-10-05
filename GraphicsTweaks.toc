@@ -1,8 +1,8 @@
 ## Interface: 16001
 ## Title: Graphics Tweaks
-## Notes: Toggle ground effect density and resample sharpening; restore saved density.
-## Author: JDftheTech
-## Version: 1.1.0
+## Notes: Snapping density slider, original-value star, and resample sharpening.
+## Author: JDFtheTech
+## Version: 1.2.0
 ## SavedVariables: GraphicsTweaksDB
 
 GraphicsTweaks.lua
