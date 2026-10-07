@@ -1,8 +1,8 @@
 ## Interface: 16001
-## Title: Graphics Tweaks
-## Notes: Ground and weather density sliders,sharpening, render setting
+## Title: GraphicsTweaks
+## Notes: Lots of graphics tweaks hidden in console now available to the user
 ## Author: JDFtheTech
-## Version: 0.0.6
-## SavedVariables: GraphicsTweaksDB
+## Version: 0.1.0
+
 
 GraphicsTweaks.lua
