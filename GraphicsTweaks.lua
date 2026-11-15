@@ -343,6 +343,36 @@ local RefreshSkyCloudLOD = GenericSlider({
 
 
 -- Target Panel 3 (rendering)
+local renderingPanel = MainFrame.Panels[3]
+local renderingWarning = CreateFrame("Frame", nil, renderingPanel, "BackdropTemplate")
+renderingWarning:SetSize(340, 116)
+renderingWarning:SetPoint("CENTER", renderingPanel, "CENTER")
+renderingWarning:SetFrameStrata("FULLSCREEN_DIALOG")
+renderingWarning:EnableMouse(true)
+renderingWarning:SetBackdrop({
+    bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+    edgeSize = 24,
+    insets = { left = 6, right = 6, top = 6, bottom = 6 },
+})
+renderingWarning:Hide()
+
+local warningText = renderingWarning:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+warningText:SetPoint("TOP", 0, -21)
+warningText:SetText("WARNING: Rendering settings are experimental!\nUse at your own risk")
+
+local warningOkay = CreateFrame("Button", nil, renderingWarning, "UIPanelButtonTemplate")
+warningOkay:SetSize(90, 24)
+warningOkay:SetPoint("BOTTOM", 0, 15)
+warningOkay:SetText("Okay")
+warningOkay:SetScript("OnClick", function()
+    renderingWarning:Hide()
+end)
+
+renderingPanel:SetScript("OnShow", function()
+    renderingWarning:Show()
+end)
+
 local text3 = MainFrame.Panels[3]:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 text3:SetPoint("TOPLEFT", 10, -10)
 text3:SetText("Rendering")
